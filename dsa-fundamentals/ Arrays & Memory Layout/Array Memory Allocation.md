@@ -9,14 +9,17 @@ This is important because it allows the computer to quickly find any item in the
 **Why it matters**: This allows the computer to calculate the exact location of any element instantly, using a simple formula.
 
 **Array Declaration and Allocation**
+
 **Declaration:** When you declare an array (e.g., int numbers[5]; in C++), you're telling the computer to reserve enough space for 5 integers.
 **Allocation:** The computer finds a block of memory big enough to fit all 5 integers side by side.
 
 **Memory Layout**
+
 **Base Address:** The memory address where the first element of the array is stored.
 **Element Size:** The amount of memory each item takes (e.g., 4 bytes for an int).
 **Access Formula**: To find the address of the ith element:
 address = base_address + (i * size_of_element)
+
 **Visualization:**
 [1000] [1004] [1008] [1012] [1016]
   |      |      |      |      |
@@ -24,10 +27,12 @@ address = base_address + (i * size_of_element)
 (Assuming int is 4 bytes and base address is 1000.)
 
 **Random Access**
+
 **Benefit:** You can access any element instantly, without having to look at the previous ones.
 **Contrast:** Unlike linked lists, where you must follow links from one element to the next, arrays let you "jump" directly to any element.
 
 **Practical Example**
+
 Suppose you want to store the ages of 5 students:
 
 Declare: int ages[5];
