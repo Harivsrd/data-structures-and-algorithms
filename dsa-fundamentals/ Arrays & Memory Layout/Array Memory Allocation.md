@@ -3,6 +3,7 @@ This block is contiguous, meaning all the items are stored right next to each ot
 This is important because it allows the computer to quickly find any item in the array, just by knowing where the first one is and how many steps to take to reach the one you want.
 
 **Contiguous Memory**
+
 **Definition:** All elements of an array are stored one after another in memory, with no gaps in between.
 **Analogy:** Think of seats in a theater row each seat is right next to the other, making it easy to count and find your seat.
 **Why it matters**: This allows the computer to calculate the exact location of any element instantly, using a simple formula.
