@@ -34,19 +34,22 @@ class Graph:
                     vis[nei] = True
         return li
 
-    def bfs(self, node):
-        vis = [False] * self.n
-        q = deque([node])
-        vis[node] = True
+
+    
+    def bfs(self,node):
         li = []
+        vis = [False]*self.n 
+        q = [] 
+        q.append(node)
+        vis[node] = True
         while q:
-            curr = q.popleft()
+            curr = q.pop(0)
             li.append(curr)
             for nei in self.adj[curr]:
                 if not vis[nei]:
                     q.append(nei)
-                    vis[nei] = True
-        return li
+                    vis[nei] = True 
+        
 
 
 def main():
