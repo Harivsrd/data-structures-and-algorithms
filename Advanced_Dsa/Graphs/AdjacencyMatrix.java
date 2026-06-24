@@ -25,14 +25,12 @@ class Graph {
         int n = sc.nextInt();
         Graph g = new Graph(n);
         while(true) {
-            System.out.print("Enter u v :");
+            System.out.print("Enter u v or -1 to stop:");
             int x = sc.nextInt();
+            if (x==-1) 
+                break;
             int y = sc.nextInt();
             g.addEdge(x, y);
-            System.out.print("Enter -1 to cancel insert (0) :");
-            int e = sc.nextInt();
-            if(e==-1)
-                break;
         }
         g.display();
     }
