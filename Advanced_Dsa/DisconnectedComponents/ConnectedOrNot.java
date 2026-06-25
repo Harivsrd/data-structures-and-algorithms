@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 class Graph {
@@ -22,23 +20,22 @@ class Graph {
         }
     }
 
-    public List<Integer> dfs(){
+    public boolean dfs(){
         boolean vis[] = new boolean[n];
-        List<Integer> res = new ArrayList<>();
-        for(int i = 0; i < n; i++) {
-            if(!vis[i]) {
-                dfs1(vis,i,res);
+        dfs1(vis,0);
+        for(boolean v : vis){
+            if(v==false){
+                return false;
             }
         }
-        return res;
+        return true;
     }
 
-    public void dfs1(boolean vis[], int s, List<Integer> res) {
+    public void dfs1(boolean vis[], int s) {
         vis[s] = true;
-        res.add(s);
         for(int i = 0; i < n; i++) {
             if(!vis[i] && m[s][i]==1){
-                dfs1(vis,i,res);
+                dfs1(vis,i);
             }
         }
     }
@@ -57,7 +54,7 @@ class Graph {
             g.addEdge(x, y);
         }
         g.display();
-        List<Integer> res = g.dfs();
-        System.out.println(res);
+        boolean res = g.dfs();
+        System.out.println(res==true ? "Connected" : "Disconnected");
     }
 }
