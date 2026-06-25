@@ -1,5 +1,3 @@
-from collections import deque
-
 class Graph:
     def __init__(self, n):
         self.n = n
